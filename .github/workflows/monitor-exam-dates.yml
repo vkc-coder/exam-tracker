@@ -2,12 +2,12 @@ name: Update ApexEdu Exam Dates
 
 on:
   schedule:
-    # Runs every 5 minutes; GitHub may delay scheduled runs.
+    # GitHub may delay scheduled runs, especially during periods of high load.
     - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: apexedu-exam-date-update
@@ -21,54 +21,23 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Install dependencies (if requirements.txt exists)
-        shell: bash
-        run: |
-          if [ -f requirements.txt ]; then
-            python -m pip install --upgrade pip
-            python -m pip install -r requirements.txt
-          else
-            echo "No root requirements.txt found; skipping dependency installation."
-          fi
+      - name: Validate existing exam feed
+        run: python -m json.tool exams-feed.json > /dev/null
 
-      - name: Run official-source date monitor
-        shell: bash
-        run: |
-          # Change this path if the monitor script is stored elsewhere.
-          if [ ! -f scripts/update_exam_dates.py ]; then
-            echo "::error::scripts/update_exam_dates.py was not found. Update this step to the actual monitor script path."
-            exit 1
-          fi
-          python scripts/update_exam_dates.py
+      - name: Check official exam portals
+        run: python scripts/update_exam_dates.py
 
-      - name: Validate generated feed (if present)
-        shell: bash
-        run: |
-          if [ -f ApexEdu_Tracker_Exams_Feed_2027.json ]; then
-            python -m json.tool ApexEdu_Tracker_Exams_Feed_2027.json > /dev/null
-          elif [ -f exams-feed.json ]; then
-            python -m json.tool exams-feed.json > /dev/null
-          else
-            echo "::warning::No recognized exam feed JSON found; confirm the monitor's output path."
-          fi
-
-      - name: Commit verified changes, if any
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No repository changes to commit."
-          else
-            git commit -m "chore: refresh official exam dates"
-            git push
-          fi
+      - name: Upload source-check report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: apexedu-source-monitor-report
+          path: monitor-output/source-monitor-report.json
+          if-no-files-found: warn
+          retention-days: 30
