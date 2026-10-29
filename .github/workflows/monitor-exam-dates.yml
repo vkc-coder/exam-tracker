@@ -1,43 +1,171 @@
-name: Update ApexEdu Exam Dates
+#!/usr/bin/env python3
+"""Check official exam portals and produce a review report.
 
-on:
-  schedule:
-    # GitHub may delay scheduled runs, especially during periods of high load.
-    - cron: "*/5 * * * *"
-  workflow_dispatch:
+Safety rule: this script NEVER overwrites exam dates in exams-feed.json.
+Official portals have different page structures; date-like strings are reported as
+review candidates, not treated as confirmed exam dates without a source-specific adapter.
+"""
+from __future__ import annotations
 
-permissions:
-  contents: read
+import hashlib
+import json
+import re
+import time
+from datetime import datetime, timezone
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
-concurrency:
-  group: apexedu-exam-date-update
-  cancel-in-progress: false
+ROOT = Path(__file__).resolve().parents[1]
+FEED_PATH = ROOT / "exams-feed.json"
+OUT_DIR = ROOT / "monitor-output"
+REPORT_PATH = OUT_DIR / "source-monitor-report.json"
+TIMEOUT_SECONDS = 15
+MAX_BYTES = 2_000_000
+DATE_RE = re.compile(r"\b(?:20\d{2})[-/](?:0?[1-9]|1[0-2])[-/](?:0?[1-9]|[12]\d|3[01])\b")
+KEYWORD_RE = re.compile(r"\b(exam(?:ination)? date|exam schedule|date of exam|test date|important dates|admission schedule|notification|schedule)\b", re.I)
 
-jobs:
-  update-exam-dates:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
 
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+class TextExtractor(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+        self.skip_depth = 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() in {"script", "style", "noscript", "svg"}:
+            self.skip_depth += 1
 
-      - name: Validate existing exam feed
-        run: python -m json.tool exams-feed.json > /dev/null
+    def handle_endtag(self, tag):
+        if tag.lower() in {"script", "style", "noscript", "svg"} and self.skip_depth:
+            self.skip_depth -= 1
 
-      - name: Check official exam portals
-        run: python scripts/update_exam_dates.py
+    def handle_data(self, data):
+        if not self.skip_depth and data.strip():
+            self.parts.append(data.strip())
 
-      - name: Upload source-check report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: apexedu-source-monitor-report
-          path: monitor-output/source-monitor-report.json
-          if-no-files-found: warn
-          retention-days: 30
+
+def utc_now():
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def candidate_dates(text):
+    """Return date-like strings only when nearby text includes a date/schedule keyword."""
+    found = []
+    for match in DATE_RE.finditer(text):
+        start, end = max(0, match.start() - 180), min(len(text), match.end() + 180)
+        context = re.sub(r"\s+", " ", text[start:end]).strip()
+        if KEYWORD_RE.search(context):
+            found.append({"dateText": match.group(0), "context": context[:420]})
+    # De-duplicate identical date/context pairs while preserving order.
+    unique = []
+    seen = set()
+    for item in found:
+        key = (item["dateText"], item["context"])
+        if key not in seen:
+            seen.add(key)
+            unique.append(item)
+    return unique[:25]
+
+
+def fetch_source(url):
+    request = Request(
+        url,
+        headers={
+            "User-Agent": "ApexEduExamDateMonitor/1.0 (official portal status checker)",
+            "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.5",
+        },
+    )
+    started = time.monotonic()
+    try:
+        with urlopen(request, timeout=TIMEOUT_SECONDS) as response:
+            body = response.read(MAX_BYTES + 1)
+            if len(body) > MAX_BYTES:
+                body = body[:MAX_BYTES]
+            content_type = response.headers.get("Content-Type", "")
+            raw = body.decode("utf-8", errors="replace")
+            extractor = TextExtractor()
+            extractor.feed(raw)
+            visible_text = re.sub(r"\s+", " ", " ".join(extractor.parts))
+            return {
+                "url": url,
+                "status": "reachable",
+                "httpStatus": getattr(response, "status", 200),
+                "contentType": content_type,
+                "checkedAt": utc_now(),
+                "elapsedMs": round((time.monotonic() - started) * 1000),
+                "contentSha256": hashlib.sha256(body).hexdigest(),
+                "dateCandidatesForReview": candidate_dates(visible_text),
+                "note": "Date candidates are unverified and are not applied to the feed.",
+            }
+    except HTTPError as exc:
+        return {
+            "url": url, "status": "http_error", "httpStatus": exc.code,
+            "checkedAt": utc_now(), "elapsedMs": round((time.monotonic() - started) * 1000),
+            "error": str(exc),
+        }
+    except (URLError, TimeoutError, OSError) as exc:
+        return {
+            "url": url, "status": "fetch_error", "checkedAt": utc_now(),
+            "elapsedMs": round((time.monotonic() - started) * 1000),
+            "error": str(exc)[:500],
+        }
+
+
+def main():
+    if not FEED_PATH.exists():
+        raise SystemExit(f"Exam feed not found: {FEED_PATH}")
+    try:
+        feed = json.loads(FEED_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise SystemExit(f"Exam feed JSON is invalid: {exc}") from exc
+
+    exams = feed.get("exams")
+    if not isinstance(exams, list):
+        raise SystemExit("Invalid feed schema: expected top-level 'exams' array.")
+
+    sources = []
+    seen_urls = set()
+    for exam in exams:
+        if not isinstance(exam, dict):
+            continue
+        url = exam.get("officialPortal")
+        if not isinstance(url, str) or not url.startswith(("https://", "http://")):
+            continue
+        if url in seen_urls:
+            continue
+        seen_urls.add(url)
+        sources.append({
+            "examIds": [e.get("id") for e in exams if isinstance(e, dict) and e.get("officialPortal") == url],
+            "examNames": [e.get("name") for e in exams if isinstance(e, dict) and e.get("officialPortal") == url],
+            **fetch_source(url),
+        })
+        # Keep requests serial and avoid hammering portals.
+        time.sleep(1)
+
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    report = {
+        "generatedAt": utc_now(),
+        "targetAdmissionCycle": feed.get("targetAdmissionCycle"),
+        "feedPath": "exams-feed.json",
+        "sourceCount": len(sources),
+        "reachableCount": sum(1 for s in sources if s.get("status") == "reachable"),
+        "failedCount": sum(1 for s in sources if s.get("status") != "reachable"),
+        "dateCandidatesRequireReview": True,
+        "automaticDateMutation": False,
+        "safetyNote": (
+            "No exam dates were changed. Portal reachability is not proof that dates are announced. "
+            "Date candidates are extracted heuristically and must be verified against the official notice."
+        ),
+        "sources": sources,
+    }
+    REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Checked {len(sources)} unique official portal URLs: "
+          f"{report['reachableCount']} reachable, {report['failedCount']} failed.")
+    print(f"Review report: {REPORT_PATH.relative_to(ROOT)}")
+    print("Exam dates were not modified; unverified candidates require human/source-specific verification.")
+
+
+if __name__ == "__main__":
+    main()
