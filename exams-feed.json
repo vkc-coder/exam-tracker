@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-30T15:33:31.018Z",
+  "lastUpdated": "2026-10-30T15:48:59.802Z",
   "dataVersion": "2026-10-30.1",
   "targetAdmissionCycle": "2027-2028",
   "totalCount": 32,
@@ -10,9 +10,9 @@
       "organizer": "National Testing Agency (NTA)",
       "category": "National",
       "targetInstitutes": "NITs, IIITs, DTU, NSUT, IIEST Shibpur, GFTIs",
-      "officialPortal": "https://jeemain.nta.nic.in",
+      "officialPortal": "https://jeemain.nta.nic.in/",
       "counsellingPlatform": "JoSAA / CSAB 2027",
-      "counsellingPortal": "https://josaa.nic.in",
+      "counsellingPortal": "https://josaa.nic.in/",
       "approxExamDate": "2027-01-20",
       "milestones": {
         "registrationWindow": "Session 1 applications: 24 Oct–22 Nov 2026; late-fee window: 23–26 Nov 2026. Session 2 registration dates: await NTA notice.",
@@ -21,7 +21,15 @@
         "counsellingDates": "JoSAA / CSAB counselling schedule to be confirmed by the authorities.",
         "applicationStartDate": "2026-10-24",
         "applicationEndDate": "2026-11-22",
-        "examTime": "09:00"
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "3 Hours (CBT)",
@@ -51,6 +59,7 @@
         "examTime": "09:00",
         "nextStepName": "Monitor official NEET (UG) 2027 information bulletin",
         "nextStepDate": "",
+        "piInterviewDate": "",
         "counsellingRegistrationDate": "",
         "counsellingStartDate": "",
         "counsellingEndDate": "",
@@ -71,15 +80,26 @@
       "organizer": "IIT Organizing Institute (Zonal Offices)",
       "category": "National",
       "targetInstitutes": "All 23 Indian Institutes of Technology (IITs)",
-      "officialPortal": "https://jeeadv.ac.in",
+      "officialPortal": "https://jeeadv.ac.in/",
       "counsellingPlatform": "JoSAA 2027 (IIT Allocation)",
-      "counsellingPortal": "https://josaa.nic.in",
+      "counsellingPortal": "https://josaa.nic.in/",
       "approxExamDate": "",
       "milestones": {
         "registrationWindow": "2027 registration dates not announced as of 29 Oct 2026.",
         "examDates": "Official JEE (Advanced) 2027 date not announced; do not rely on the earlier historical estimate.",
         "resultDate": "Awaiting official schedule.",
-        "counsellingDates": "JoSAA 2027 schedule not yet announced."
+        "counsellingDates": "JoSAA 2027 schedule not yet announced.",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "6 Hours (2 compulsory sessions: 9:00 AM–12:00 PM & 2:30 PM–5:30 PM)",
@@ -95,7 +115,7 @@
       "organizer": "IIIT Hyderabad Admissions Directorate",
       "category": "Premier",
       "targetInstitutes": "IIIT Hyderabad (5-Yr Dual Degree B.Tech + MS by Research in CSE, ECE, CND, CL, CHD)",
-      "officialPortal": "https://ugadmissions.iiit.ac.in",
+      "officialPortal": "https://ugadmissions.iiit.ac.in/",
       "counsellingPlatform": "IIIT-H Portal & Interview Round",
       "counsellingPortal": "https://ugadmissions.iiit.ac.in/ugee/",
       "approxExamDate": "",
@@ -103,7 +123,18 @@
         "registrationWindow": "UGEE 2027 application dates not announced as of 29 Oct 2026.",
         "examDates": "UGEE 2027 exam date awaiting official notice.",
         "resultDate": "Awaiting official notice.",
-        "counsellingDates": "Interview and seat-allocation schedule for 2027 awaiting official notice."
+        "counsellingDates": "Interview and seat-allocation schedule for 2027 awaiting official notice.",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "3 Hours CBT (Section 1: SUPR 60m + Section 2: REAP 120m)",
@@ -119,15 +150,26 @@
       "organizer": "BITS Pilani",
       "category": "Premier",
       "targetInstitutes": "BITS Pilani, BITS Goa, BITS Hyderabad",
-      "officialPortal": "https://www.bitsadmission.com",
+      "officialPortal": "https://www.bitsadmission.com/",
       "counsellingPlatform": "BITS Centralized Iterations",
-      "counsellingPortal": "https://www.bitsadmission.com",
+      "counsellingPortal": "https://www.bitsadmission.com/",
       "approxExamDate": "",
       "milestones": {
         "registrationWindow": "BITSAT 2027 application dates not announced as of 29 Oct 2026.",
         "examDates": "BITSAT 2027 session dates not announced; earlier date was only a planning estimate.",
         "resultDate": "Awaiting official notice.",
-        "counsellingDates": "BITSAT 2027 iteration schedule not announced."
+        "counsellingDates": "BITSAT 2027 iteration schedule not announced.",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "3 Hours CBT",
@@ -143,15 +185,26 @@
       "organizer": "Joint Admissions Committee (JAC IISER)",
       "category": "Premier",
       "targetInstitutes": "7 IISERs + IISc Bengaluru (BS Research) + IIT Madras (BS Medical Sciences)",
-      "officialPortal": "https://iiseradmission.ac.in",
+      "officialPortal": "https://iiseradmission.ac.in/",
       "counsellingPlatform": "JAC IISER Centralized Rounds",
-      "counsellingPortal": "https://iiseradmission.ac.in",
+      "counsellingPortal": "https://iiseradmission.ac.in/",
       "approxExamDate": "",
       "milestones": {
         "registrationWindow": "IAT 2027 registration dates not announced as of 29 Oct 2026.",
         "examDates": "IISER Aptitude Test 2027 date awaiting official notice.",
         "resultDate": "Awaiting official notice.",
-        "counsellingDates": "Admission offer rounds for 2027 not announced."
+        "counsellingDates": "Admission offer rounds for 2027 not announced.",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "3 Hours CBT",
@@ -167,7 +220,7 @@
       "organizer": "Indian Statistical Institute (Kolkata & Bengaluru)",
       "category": "Premier",
       "targetInstitutes": "ISI Kolkata (B.Stat Hons) & ISI Bengaluru (B.Math Hons)",
-      "officialPortal": "https://www.isical.ac.in",
+      "officialPortal": "https://www.isical.ac.in/",
       "counsellingPlatform": "ISI Allocation & Interview Rounds",
       "counsellingPortal": "https://www.isical.ac.in/~admission/",
       "approxExamDate": "",
@@ -175,7 +228,18 @@
         "registrationWindow": "ISI Admission Test 2027 application dates not announced as of 29 Oct 2026.",
         "examDates": "ISI Admission Test 2027 date awaiting official notice.",
         "resultDate": "Awaiting official notice.",
-        "counsellingDates": "Final allocation schedule for 2027 not announced."
+        "counsellingDates": "Final allocation schedule for 2027 not announced.",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "UGA: 2 Hours (Forenoon) + UGB: 2 Hours (Afternoon)",
@@ -191,9 +255,9 @@
       "organizer": "Vellore Institute of Technology (VIT)",
       "category": "Top Private",
       "targetInstitutes": "VIT Vellore, Chennai, AP (Amaravati), Bhopal",
-      "officialPortal": "https://viteee.vit.ac.in",
+      "officialPortal": "https://viteee.vit.ac.in/",
       "counsellingPlatform": "VIT Online Centralized Counselling",
-      "counsellingPortal": "https://viteee.vit.ac.in",
+      "counsellingPortal": "https://viteee.vit.ac.in/",
       "approxExamDate": "2027-04-27",
       "milestones": {
         "registrationWindow": "Applications opened 20 Oct 2026; last date: 31 Mar 2027.",
@@ -201,7 +265,16 @@
         "resultDate": "Second week of May 2027 (tentative).",
         "counsellingDates": "Online counselling starts in the second week of May 2027 (tentative); detailed registration/round dates not yet published.",
         "applicationStartDate": "2026-10-20",
-        "applicationEndDate": "2027-03-31"
+        "applicationEndDate": "2027-03-31",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "2 Hours 30 Minutes CBT",
@@ -219,17 +292,24 @@
       "targetInstitutes": "SRM KTR (Main), Ramapuram, Vadapalani, NCR Ghaziabad, AP",
       "officialPortal": "https://applications.srmist.edu.in/btech",
       "counsellingPlatform": "SRM Online Choice Filling",
-      "counsellingPortal": "https://applications.srmist.edu.in",
+      "counsellingPortal": "https://applications.srmist.edu.in/",
       "approxExamDate": "2027-04-17",
       "milestones": {
         "registrationWindow": "Applications open (official page checked 30 Oct 2026). Rs 1,400 per phase, non-refundable. Phase 1 deadline 02 Apr 2027; Phase 2 deadline 04 Jun 2027 (tentative, subject to change).",
         "examDates": "Phase 1 CBT: 17–18 Apr 2027. Phase 2 CBT: 19–20 Jun 2027 (tentative per applications.srmist.edu.in).",
         "resultDate": "Not yet announced.",
         "counsellingDates": "Online allocation schedule not yet announced; seat allotment in Phase 2 may change with seat availability.",
+        "applicationStartDate": "",
         "applicationEndDate": "2027-04-02",
-        "applicationStatus": "Open",
+        "examTime": "09:00",
         "nextStepName": "Phase 2 application deadline",
-        "nextStepDate": "2027-06-04"
+        "nextStepDate": "2027-06-04",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Open"
       },
       "pattern": {
         "duration": "2 Hours 30 Minutes (Remote Proctored / CBT)",
@@ -245,15 +325,26 @@
       "organizer": "Manipal Academy of Higher Education (MAHE)",
       "category": "Top Private",
       "targetInstitutes": "MIT Manipal, MIT Bengaluru, Manipal University Jaipur",
-      "officialPortal": "https://manipal.edu",
+      "officialPortal": "https://manipal.edu/",
       "counsellingPlatform": "Manipal Centralized Counselling",
-      "counsellingPortal": "https://counseling.manipal.edu",
+      "counsellingPortal": "https://counseling.manipal.edu/",
       "approxExamDate": "",
       "milestones": {
         "registrationWindow": "MET 2027 registration dates not announced as of 29 Oct 2026.",
         "examDates": "MET 2027 dates awaiting official notice.",
         "resultDate": "Awaiting official notice.",
-        "counsellingDates": "MET 2027 counselling schedule not announced."
+        "counsellingDates": "MET 2027 counselling schedule not announced.",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "2 Hours CBT",
@@ -269,15 +360,26 @@
       "organizer": "West Bengal Joint Entrance Examinations Board",
       "category": "State",
       "targetInstitutes": "Jadavpur University, Calcutta Univ, Heritage, IEM",
-      "officialPortal": "https://wbjeeb.nic.in",
+      "officialPortal": "https://wbjeeb.nic.in/",
       "counsellingPlatform": "WBJEE e-Counselling 2027",
-      "counsellingPortal": "https://wbjeeb.nic.in",
+      "counsellingPortal": "https://wbjeeb.nic.in/",
       "approxExamDate": "",
       "milestones": {
         "registrationWindow": "WBJEE 2027 registration dates not announced as of 29 Oct 2026.",
         "examDates": "WBJEE 2027 exam date awaiting official notice.",
         "resultDate": "Awaiting official notice.",
-        "counsellingDates": "WBJEE 2027 counselling schedule not announced."
+        "counsellingDates": "WBJEE 2027 counselling schedule not announced.",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "4 Hours (Paper 1 Math: 2h, Paper 2 Phys/Chem: 2h)",
@@ -293,15 +395,26 @@
       "organizer": "COMEDK Karnataka Consortium",
       "category": "State",
       "targetInstitutes": "RVCE, BMSCE, MSRIT, Dayananda Sagar",
-      "officialPortal": "https://www.comedk.org",
+      "officialPortal": "https://www.comedk.org/",
       "counsellingPlatform": "COMEDK Online Centralized Counselling",
-      "counsellingPortal": "https://www.comedk.org",
+      "counsellingPortal": "https://www.comedk.org/",
       "approxExamDate": "",
       "milestones": {
         "registrationWindow": "COMEDK UGET 2027 registration dates not announced as of 29 Oct 2026.",
         "examDates": "COMEDK UGET 2027 exam date awaiting official notice.",
         "resultDate": "Awaiting official notice.",
-        "counsellingDates": "COMEDK UGET 2027 counselling schedule not announced."
+        "counsellingDates": "COMEDK UGET 2027 counselling schedule not announced.",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "3 Hours CBT",
@@ -317,15 +430,26 @@
       "organizer": "State Common Entrance Test Cell, Maharashtra",
       "category": "State",
       "targetInstitutes": "COEP Technological Univ, VJTI Mumbai, SPIT, PICT",
-      "officialPortal": "https://cetcell.mahacet.org",
+      "officialPortal": "https://cetcell.mahacet.org/",
       "counsellingPlatform": "CAP (Centralized Admission Process)",
-      "counsellingPortal": "https://cetcell.mahacet.org",
+      "counsellingPortal": "https://cetcell.mahacet.org/",
       "approxExamDate": "",
       "milestones": {
         "registrationWindow": "MHT CET 2027 registration dates not announced as of 29 Oct 2026.",
         "examDates": "MHT CET 2027 exam dates awaiting official notice.",
         "resultDate": "Awaiting official notice.",
-        "counsellingDates": "CAP 2027 schedule not announced."
+        "counsellingDates": "CAP 2027 schedule not announced.",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "3 Hours CBT (90m Math + 90m Physics/Chemistry)",
@@ -352,8 +476,15 @@
         "counsellingDates": "Interview dates: second and third week of January 2027 (tentative); exact interview slot to be notified.",
         "applicationStartDate": "2026-08-17",
         "applicationEndDate": "2026-10-17",
+        "examTime": "09:00",
         "nextStepName": "Prepare for IIMB UG Admission Test",
-        "nextStepDate": "2026-11-15"
+        "nextStepDate": "2026-11-15",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "Refer official UG Admissions Test information",
@@ -383,6 +514,7 @@
         "examTime": "09:00",
         "nextStepName": "Monitor CUET (UG) 2027 notification and prepare subject combination shortlist",
         "nextStepDate": "",
+        "piInterviewDate": "",
         "counsellingRegistrationDate": "",
         "counsellingStartDate": "",
         "counsellingEndDate": "",
@@ -417,8 +549,12 @@
         "examTime": "09:00",
         "nextStepName": "Check AEEE 2027 application opening on the official portal",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official AEEE 2027 bulletin",
@@ -448,8 +584,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor KIITEE 2027 registration and phase schedule",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official 2027 bulletin",
@@ -479,8 +619,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor NATA 2027 notification and check architecture eligibility",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official NATA 2027 brochure",
@@ -510,8 +654,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor NEST 2027 registration notification",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official NEST 2027 brochure",
@@ -541,8 +689,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor KEA UGCET 2027 notification and eligibility rules",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per KEA 2027 bulletin",
@@ -572,8 +724,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor KEAM 2027 notification and current engineering admission rules",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official KEAM 2027 prospectus",
@@ -603,8 +759,12 @@
         "examTime": "09:00",
         "nextStepName": "Check OJEE 2027 bulletin and programme-specific admission route",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official OJEE 2027 bulletin",
@@ -634,8 +794,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor AP EAPCET 2027 official portal",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official 2027 notification",
@@ -665,8 +829,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor TG EAPCET 2027 official portal",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official 2027 notification",
@@ -696,8 +864,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor GUJCET 2027 notification and ACPC admission notices",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official GUJCET 2027 bulletin",
@@ -727,8 +899,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor ASTU Assam CEE 2027 notice",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official Assam CEE 2027 bulletin",
@@ -758,8 +934,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor SITEEE 2027 engineering entrance announcements",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official SITEEE 2027 bulletin",
@@ -789,8 +969,12 @@
         "examTime": "09:00",
         "nextStepName": "Check IMU CET 2027 and maritime medical fitness requirements",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official IMU CET 2027 prospectus",
@@ -820,8 +1004,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor AIIMS BSc Nursing 2027 prospectus and eligibility",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official AIIMS 2027 prospectus",
@@ -851,8 +1039,12 @@
         "examTime": "09:00",
         "nextStepName": "Monitor AIIMS Paramedical 2027 prospectus and course eligibility",
         "nextStepDate": "",
-        "applicationStatus": "Auto",
-        "counsellingStatus": "Awaiting Notification"
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "As per official AIIMS 2027 prospectus",
@@ -876,7 +1068,18 @@
         "registrationWindow": "Open year-round (Test centers in India + At-Home)",
         "examDates": "Flexible year-round slots; 15 Dec 2026 is a planning target, not an official booked date",
         "resultDate": "Unofficial on test day; Official report in 8-10 days",
-        "counsellingDates": "Fall 2027 Priority Deadlines: Dec 2026 – Feb 2027"
+        "counsellingDates": "Fall 2027 Priority Deadlines: Dec 2026 – Feb 2027",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "1 Hour 58 Minutes (Shorter GRE format)",
@@ -900,7 +1103,18 @@
         "registrationWindow": "Open year-round (Multiple testing slots weekly)",
         "examDates": "Flexible year-round slots; 20 Dec 2026 is a planning target, not an official booked date",
         "resultDate": "Official scores in 4 to 8 calendar days",
-        "counsellingDates": "Score validity: 2 Years (Covers full Fall '27 cycle)"
+        "counsellingDates": "Score validity: 2 Years (Covers full Fall '27 cycle)",
+        "applicationStartDate": "",
+        "applicationEndDate": "",
+        "examTime": "09:00",
+        "nextStepName": "",
+        "nextStepDate": "",
+        "piInterviewDate": "",
+        "counsellingRegistrationDate": "",
+        "counsellingStartDate": "",
+        "counsellingEndDate": "",
+        "counsellingStatus": "Awaiting Notification",
+        "applicationStatus": "Auto"
       },
       "pattern": {
         "duration": "Under 2 Hours",
